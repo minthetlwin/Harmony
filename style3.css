@@ -1,0 +1,329 @@
+body{
+    overflow: hidden;
+}
+.container{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:1000px;
+    height:600px;
+    padding:50px;
+}
+#slide{
+    width:max-content;
+    margin-top:50px;
+}
+.item{
+    width:150px;
+    height:250px;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    top:40%;
+    transform: translate(0,-50%);
+    border-radius: 20px;
+}
+.item:nth-child(1),
+.item:nth-child(2){
+    
+    left:50%;
+    
+    
+}
+.item:nth-child(3){
+    left:50%;
+}
+.item:nth-child(4){
+    left:calc(50% + 220px);
+}
+.item:nth-child(5){
+    left:calc(50% + 440px);
+}
+.item:nth-child(n+6){
+    left:calc(50% + 660px);
+    opacity: 0;
+}
+.item .content{
+    position: absolute;
+    top:130%;
+    left:0px;
+    width:300px;
+    text-align: left;
+    padding:0;
+    color:black;
+    transform: translate(0,-50%);
+    display: none;
+    font-family: system-ui;
+}
+.item:nth-child(2) .content{
+    display: block;
+    z-index: 11111;
+}
+.item .name{
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 1 forwards
+}
+.item .des{
+    margin-left:-10px;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.3s 1 forwards
+}
+.item button{
+    padding:10px 20px;
+    border:none;
+    opacity: 0;
+    animation:showcontent 1s ease-in-out 0.6s 1 forwards
+}
+@keyframes showcontent{
+    from{
+        opacity: 0;
+        transform: translate(0,100px);
+        filter:blur(33px);
+    }to{
+        opacity: 1;
+        transform: translate(0,0);
+        filter:blur(0);
+    }
+}
+.buttons{
+    position: absolute;
+    bottom:30px;
+    z-index: 222222;
+    text-align: center;
+    width:100%;
+    
+}
+#next{
+    margin-left: 30px;
+}
+.buttons button{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:1px solid #555;
+    transition: 0.5s;
+}.buttons button:hover{
+    background-color: #F17400   ;
+}
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+} */
+/* Update the .sec-body styles */
+.sec-body {
+    min-height: 100vh; /* Make .sec-body take the full viewport height */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+  }
+  
+  /* Ensure the swiper container takes the full height */
+  .swiper {
+    height: 10vh;
+  }
+  
+  /* Remove height from .swiper-slide as it will be determined by .sec-body */
+  .swiper-slide {
+    height: auto;
+  }
+  .card-wrapper{
+    border-radius: 25px;
+  }
+
+.silde-container{
+    max-width: 1120px;
+    min-width: 100px;
+    width: 100%;
+    padding: 40px 0;
+    border-radius: 25px;
+
+}
+.slide-content{
+    margin: 0 0px;
+    border-radius: 25px;
+}
+.card{
+    width: 170px;
+    height: 300px;
+    border-radius: 25px;
+    background-color: rgb(215, 215, 193);
+
+}
+
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: -40px;
+    height: 100%;
+    width: 100%;
+    background-color: #F17400;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;;
+    background-color: #F17400;
+    
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: rgb(215, 215, 193);
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fffefe;
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.description{
+    max-height: fit-content ;
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+.button{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: #4070F4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover{
+    background: #265DF2;
+}
+.reviewer-name{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(215, 215, 193);
+    position: absolute;
+    top: 8%;
+    left: 5%;
+    font-family: 'RocknRoll One';
+}
+.review-text{
+    font-size: 12px;
+    font-family: 'RocknRoll One';
+    max-width: 150px;
+    margin-left: 10px;
+    top: 85%;
+    z-index: 99999;
+    position: absolute;
+}
+.review-form{
+    position: absolute;
+    /* border: 1px solid rgb(63, 62, 62); */
+    width: 40%;
+    height: 70%;
+    top: 20%;
+    left: -10%;
+    font-family: 'RocknRoll One';
+    
+}
+.review-form-header{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.reviewer-name-get{
+    margin-top: 20px;
+    font-size:15px;
+    
+}
+.reviewer-name-input{
+   margin-top: 20px;
+    
+    width: 200px;
+    height: 30px;
+}
+.review-description-get{
+margin-top: 20px;
+font-size:15px ;
+
+}
+.review-description-input{
+    
+    margin-top: 20px;
+    
+}
+.reviewer-photo-get{
+    
+    margin-top: 20px;
+    font-size: 15px;
+}
+.reviewer-photo-upload{
+    margin-top: 20px;
+}
+.photo-upload-img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 30%;
+    margin-top: 10px;
+    
+}
+
+#dropArea {
+    width: 300px;
+    height: 100px;
+    border: 2px dashed #ccc;
+    text-align: center;
+    line-height: 150px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.submit-review{
+    font-style:'RocknRoll One' ;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: #F17400;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}

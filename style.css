@@ -1,0 +1,1266 @@
+
+.food-list::-webkit-scrollbar{
+    width: 0;
+    }
+          .logo-three-line{
+              float: left;
+              margin-top: 5px;
+          }
+          .logo-three-line1{
+              width: 30px;
+              height: 3px;
+              background-color: #505050;
+              margin: 6px 0;
+          }
+          .logo-three-line2{
+              width: 30px;
+              height: 3px;
+              background-color: #505050;
+              margin: 6px 10px;
+          }
+          .logo-three-line3{
+              width: 30px;
+              height: 3px;
+              background-color: #505050;
+              margin: 6px 0;
+          }
+          .navbar{
+              width: 90%;
+              height: 10%;
+              margin: 20px 30px;
+              overflow: hidden;
+              position: relative;
+              align-items: center;
+              visibility: visible;
+          }
+          .navbar-name{
+              float: left;
+              font-size: 30px;
+              font-family: 'RocknRoll One';
+          }
+          .navbar-bar{
+              margin-left:30%;
+          }
+  
+          
+  .nav {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #fff;
+    padding: 0 20px;
+    margin-left: 30%;
+  }
+  
+  .nav-item {
+    color: #000;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.4s;
+    margin: 0 10px;
+    z-index: 1;
+    font-family: 'RocknRoll One';
+    font-weight: 400;
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  /* Adjusted styles for the active indicator */
+  .nav-indicator {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    transition: 0.4s;
+    width: 0; /* Initialize the width to 0 */
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+  }
+   .nav-item:before {
+       content: "";
+       position: absolute;
+       bottom: -6px;
+       left: 0;
+       width: 100%;
+       height: 5px;
+       background-color: #dfe2ea;
+       border-radius: 8px 8px 0 0;
+       opacity: 0;
+       transition: 0.4s;
+  }
+   .nav-item:not(.is-active):hover:before {
+       opacity: 1;
+       bottom: 0;
+  }
+   .nav-item:not(.is-active):hover {
+       color: #333;
+  }
+  
+  
+  .menu-name-item {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+    z-index: 1;
+    font-family: 'RocknRoll One';
+    font-weight: 400;
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+      padding: 3px;
+      width: 70px;
+      height: 30px;
+      border: none;
+      
+  }
+  
+  .menu-name-nav {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #fff;
+    padding: 0 20px;
+    float: left;
+  }
+  .active {  
+      background-color:#F17400;
+      transition: all ease 0.35s;
+      border-radius: 5px 10px;
+    color: #fff;
+  }
+  
+  .food-list{
+      position: absolute;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 30px;
+      row-gap: 30px;
+      overflow-y: auto;
+      max-height: 453px;
+      width: 90%;
+      margin: 50px 50px 0px 50px;
+      height: 90%;
+      animation: slideUp .8s ease forwards .5s;
+  }
+  
+  .food-container{
+      border-radius: 17px 17px 25px 25px;
+  background: #F17400;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+  width: 180px;
+  height: 220px;
+  flex-shrink: 0;
+  transition: 0.35s;
+  
+  }
+  /* .food-container:hover{
+      opacity: 1;
+      transform: scale(1.03);
+      
+  } */
+  .food-image-container{
+      width: 180px;
+      height: 170px;
+      background-color: #FFF;
+      border-radius: 15px 15px 25px 25px;
+      align-items: center;
+  }
+  .food-image{
+      margin-top: 10px;
+    width: 160px;
+    height: 140px;
+    border-radius:10%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .food-list-item{
+      margin-right: 30px;
+    position: relative;
+  }
+  .food-item-name,.food-item-price{
+      color: #FFF;
+      font-family: 'RocknRoll One';
+      font-size: 13px;
+      margin-left: 10px;
+  }
+  .cart{
+      font-size: 20px;
+      color: #FFF;
+      font-weight: 400;
+      margin-top: 10px;
+      float: right;
+      background-color: #ffffff00;
+      border: none;
+      margin-right: -10px;
+      
+  }
+  .floating-button{
+      margin-top:22px;
+  }
+  .openCart{
+      
+      position:fixed;
+      width:60px;
+      height:60px;
+      bottom:40px;
+      right:40px;
+      background-color:#F17400;
+      color:#FFF;
+      font-size: 20px;
+      border-radius:50px;
+      text-align:center;
+      box-shadow: 2px 2px 3px #999;
+      visibility: hidden;
+      z-index: 11111;
+  }
+
+  .quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -3px;
+    left: 80%;
+    padding: 5px 10px;
+    width: 1px;
+    height: 13px;
+    font-family: 'RocknRoll One';
+    font-size: 10px;
+    background-color: red;
+    border-radius: 50px;
+    /* visibility: hidden; */
+}
+  
+
+/*..... ORDER LIST CARD..... */
+.order-list-card{
+    width: 600px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.559);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 9;
+    visibility: hidden;
+
+    
+}
+
+/* For Email Submit */
+#emailForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    padding: 30px;
+    border: 1px solid #F17400;
+    border-radius: 10px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.559);
+    
+}
+#itemTable{
+    z-index: 100;
+    visibility: hidden;
+}
+
+#username{
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #F17400;
+}
+#email{
+    width: 250px;
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #F17400;
+    
+}
+
+#submit-button {
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 32%;
+    padding: 5px 20px 5px 20px;
+    border:1px solid #F17400;
+    border-radius: 5px;
+    
+}
+.close-mail{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    border: none;
+    background-color: #ffffff00;
+    color: #F17400;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.active .order-list-card{
+    visibility: visible;
+}
+
+.active3{
+    visibility: hidden;
+}
+
+.active2{
+    filter: blur(6px);
+}
+.confirm{
+    width: 190px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #F17400;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-family: 'RocknRoll One';
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    line-height: 42px; 
+    cursor: pointer;
+}
+
+.confirm:hover{
+    transform: translate(-50%, -53%);
+}
+
+.closeCard{
+    transition: 0s;
+}
+.outer {
+position: relative;
+margin: auto;
+width: 20px;
+float: right;
+top: 0px;
+cursor: pointer;
+right: 20px;
+}
+
+.inner {
+width: inherit;
+text-align: center;
+}
+
+label { 
+font-size: .4em; 
+line-height: 3em;
+text-transform: uppercase;
+color: #F17400;
+transition: all .0s ease-in;
+opacity: 0;
+cursor: pointer;
+font-weight: bolder;
+}
+
+.inner:before, .inner:after {
+position: absolute;
+content: '';
+height: 3px;
+width: inherit;
+background: #F17400;
+left: 0;
+transition: all .0s ease-in;
+}
+
+.inner:before {
+top: 43%; 
+transform: rotate(45deg);  
+} 
+
+.inner:after {  
+bottom: 43%;
+transform: rotate(-45deg);  
+}
+
+.outer:hover label {
+opacity: 1;
+}
+
+.outer:hover .inner:before,
+.outer:hover .inner:after {
+transform: rotate(0);
+}
+
+.outer:hover .inner:before {
+top: 0;
+}
+
+.outer:hover .inner:after {
+bottom: 0;
+}
+.order-card-header{
+font-family: 'RocknRoll One';
+color: #F17400;
+text-align: center;
+top: 20px;
+position: relative;
+}
+.order-list-body{
+margin-top: 30px;
+max-height: 315px;
+overflow-y: auto;
+position: absolute;
+display: flex;
+flex-direction: column;
+animation: slideIn 1.5s ease-in-out forwards;
+}
+.order-list-body::-webkit-scrollbar{
+width: 0;
+}
+.order-item{
+width: 540px;
+height: 100px;
+font-family: 'RocknRoll One';
+color: #F17400;
+font-size: 15px;
+margin: 0px 0px 20px 30px;
+background-color: #ffffff6f;
+border-radius: 10px;
+}
+/* ... (existing styles) ... */
+
+/* Apply styles to the table */
+table {
+width: 100%;
+border-collapse: collapse;
+}
+
+/* Apply styles to table cells */
+tr td {
+padding: 10px 5px 5px 5px;
+text-align: center;
+}
+
+/* Apply styles to the number column */
+.number {
+padding-left: 20px;
+}
+
+/* Apply styles to the item image */
+td img {
+width: 80px;
+height: 80px;
+}
+
+/* Apply styles to the plus and minus buttons */
+.minus,
+.plus {
+background-color: #F17400;
+width: 25px;
+height: 25px;
+border: none;
+color: white;
+font-size: 15px;
+}
+
+.close{
+background-color: #ffffff00;
+width: 25px;
+height: 25px;
+border: none;
+color: #F17400;
+font-size: 20px;
+}
+
+/* Apply styles to the count cell */
+.count {
+height: 25px;
+text-align: center;
+line-height: 25px;
+}
+
+/* Order Total Amount */
+
+.order-total{
+    top: 75%;
+    position: absolute;
+    font-family: 'RocknRoll One';
+    color: #F17400;
+    font-size: 15px;
+    margin: 0px 0px 20px 30px;
+    width: 540px;
+    border-radius: 10px;
+  }
+  hr{
+    width: 540px;
+    position: absolute;
+    top: 72%;
+    margin-left: 30px;
+  }
+
+  /* Home Page */
+
+  .index-head-text{
+    font-size: 40px;
+    font-family: 'RocknRoll One';
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.index-text{
+    margin:5% 0% 10% 7%;
+    height: 100%;
+}
+.index-body-text{
+    font-family: 'Sulphur Point';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5%;
+
+}
+.index-line{
+    margin-top: 5%;
+    width: 40%;
+    
+    color: #000;
+    border: 1px solid black;
+}
+.order{
+    width: 150px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 15px 15px 75px 15px;
+    background: #F17400;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    float: left;
+    color: #fff;
+    font-family: 'RocknRoll One';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.book-table{
+    width: 150px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 75px 15px 15px 15px;
+    background: #6C6C6C;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    margin-left: 3%;
+    float: left;
+    color: #fff;
+    font-family: 'RocknRoll One';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.index-button{
+    margin-top: 5%;
+
+}
+.index-large-photo{
+    width: 30%;
+    height: fit-content;
+    flex-shrink: 0;
+    float: right;
+    margin-right:7%;
+    margin-top: -5%;
+}
+.index-large-photo img{
+    width: 100%;
+    height: 369px;
+    margin-bottom: 10%;
+}
+.prev-button{
+    flex-shrink: 0;
+    stroke-width: 1px;
+    stroke: #000;
+    float: left;
+}
+.prev-button svg{
+    margin-top: 5%;
+    width:30px;
+    height:12px;
+    fill:none;
+}
+.prev-button-text{
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: RocknRoll One;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 5px;
+    float: right;
+}
+.next-button svg{
+    margin-top: 6%;
+    width:30px;
+    height:12px;
+    fill:none;
+}
+.next-button{
+    flex-shrink: 0;
+    stroke-width: 1px;
+    stroke: #000;
+    float: right;
+    
+}
+.next-button-text{
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: RocknRoll One;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 5px;
+    float: left;
+}
+.next , .prev{
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #fff;
+    border: none;
+}
+
+.book-table:hover {
+    transform: scale(1.05) translateY(-5px);
+    
+}
+.order:hover{
+    transform: scale(1.05) translateY(-5px);
+}
+
+
+* {
+box-sizing: border-box;
+}
+
+.clip-notching {
+float: right;
+text-align: center;
+padding: 3px;
+font-family: 'RocknRoll One';
+color: #FfF;
+font-size: 15px;
+width: 70px;
+height: 30px;
+/* background: linear-gradient(
+45deg,
+#f9d9e7,
+#F17400
+); */
+
+background-color:#F17400;
+clip-path: polygon(8% 0, 92% 0, 100% 20%, 100% 80%, 92% 100%, 8% 100%, 0% 80%, 0% 20%);
+}
+
+.index-photo-name{
+color: #F17400;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: RocknRoll One;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+float: left;
+margin-left: 20%;
+width: fit-content;
+}
+.fileInput{
+    font-size: 15px;
+    font-family: 'RocknRoll One';
+    opacity: 1;
+    text-transform: none;
+    font-weight: normal;
+}
+.name,.mail,.Phone{
+    line-height: 0px;
+    font-size: 13px;
+    font-family: 'RocknRoll One';
+    font-weight: 400;
+    margin-top: 20px;
+
+}
+.about-body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    position: relative;
+    margin-left: 7%;
+}
+
+
+.MinThwayKhant{
+    position: absolute;
+    top: 70%;
+    left: 25%;
+}
+.AungKaungSett{
+    position: absolute;
+    top: 70%;
+    left: 75%;
+}
+footer{
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive media queries */
+@media only screen and (max-width: 600px) {
+    /* Adjustments for smaller screens */
+    body{
+        max-width: 412px;
+        max-height: 912px;
+    }
+    .logo-three-line{
+        float: left;
+        margin-top: 12px;
+        margin-left: 10px;
+    }
+    .logo-three-line1{
+        width: 15px;
+        height: 1.5px;
+        margin: 3px 0;
+    }
+    .logo-three-line2{
+        width: 15px;
+        height: 1.5px;
+        margin: 3px 3.5px;
+    }
+    .logo-three-line3{
+        width: 15px;
+        height: 1.5px;
+        margin: 3px 0;
+    }
+    .navbar-name{
+        float: left;
+        font-size: 20px;
+        font-family: 'RocknRoll One';
+        margin-top: 7px;
+    }
+    .navbar-bar{
+        margin-left:0%;
+    }
+    .navbar-logo-container{
+        width: 100%;
+    }
+    .navbar {
+        margin: -10px 0;
+        height: 80px;
+        background-color: #fff;
+        z-index: 9999999;
+        position: fixed;
+    }
+    
+    .nav {
+        position: absolute;
+        top: 45%;
+        left: 10px;
+        justify-content: center;
+        padding: 0px;
+        margin-left: 10px;
+        width: 100%;
+        margin-bottom: -20px;
+    }
+    
+    .nav-item {
+        font-size: 15px;
+        padding: 10px 3px;
+        margin-left: 0px;
+    }
+    
+    .nav-indicator {
+        display: none;
+    }
+    .menu-name-nav {
+        padding: 0 20px 0 0;
+        margin-left: 0px;
+        position: absolute;
+        top: 13%;
+        left: 15%;
+      }
+    
+    .menu-name-item {
+        font-size: 15px;
+        width: 70px;
+        padding: 3px;
+        height: 30px;
+    }
+    .food-list {
+        top: 18%;
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+        overflow-y: auto;
+        width: 98%;
+        margin: 0px 0px 0px 0px;
+        padding-left:5px ;
+        animation: slideUp .8s ease forwards .5s;
+        /* height: 80%; */
+        max-height: 82%;
+    }
+    
+    .food-container {
+        width: 170px;
+        height: 220px;
+        margin-top: 20px;
+        border-radius: 17px 17px 15px 15px;
+    }
+    .food-image-container{
+        width: 170px;
+        height: 160px;
+        background-color: #FFF;
+        border-radius: 15px 15px 15px 15px;
+        align-items: center;
+    }
+    .food-image {
+        margin-top: 5px;
+        width: 160px;
+        height: 150px;
+        border-radius: 10%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .food-list-item{
+        margin-right: 10px;
+      position: relative;
+    }
+    .food-item-name,.food-item-price{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .cart{
+        font-size: 20px;
+        color: #FFF;
+        font-weight: 400;
+        margin-top: 10px;
+        float: right;
+        background-color: #ffffff00;
+        border: none;
+        margin-right: -5px;
+        
+    }
+    
+    .openCart {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .floating-button {
+        margin-top: 18px;
+    }
+    .openCart{
+        position:fixed;
+        width:60px;
+        height:60px;
+        background-color:#F17400;
+        color:#FFF;
+        font-size: 20px;
+        border-radius:50px;
+        text-align:center;
+        visibility: hidden;
+        bottom: 60px;
+      right: 60px;
+      z-index: 100;
+    }
+    .quantity{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        top: -3px;
+        left: 80%;
+        padding: 4px 8px;
+        width: 2px;
+        height: 10px;
+        font-family: 'RocknRoll One';
+        font-size: 10px;
+        background-color: red;
+        border-radius: 50px;
+    }
+    
+    .order-list-card {
+        width: 350px;
+        height: 500px;
+    }
+    
+    .order-card-header{
+        font-family: 'RocknRoll One';
+        color: #F17400;
+        text-align: center;
+        top: 20px;
+        font-size: 18px;
+        position: relative;
+    }
+    .closeCard{
+        transition: 0s;
+    }
+    .outer {
+    position: relative;
+    margin: auto;
+    width: 20px;
+    float: right;
+    top: 0px;
+    cursor: pointer;
+    right: 20px;
+    }
+    
+    .inner {
+    width: inherit;
+    text-align: center;
+    }
+    
+    label { 
+    font-size: .2em; 
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #F17400;
+    transition: all .0s ease-in;
+    opacity: 0;
+    cursor: pointer;
+    font-weight: bolder;
+    }
+    
+    .inner:before, .inner:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: inherit;
+    background: #F17400;
+    left: 0;
+    transition: all .0s ease-in;
+    }
+    
+    .inner:before {
+    top: 42%; 
+    transform: rotate(45deg);  
+    } 
+    
+    .inner:after {  
+    bottom: 43%;
+    transform: rotate(-45deg);  
+    }
+    
+    .outer:hover label {
+    opacity: 1;
+    }
+    
+    .outer:hover .inner:before,
+    .outer:hover .inner:after {
+    transform: rotate(0);
+    }
+    
+    .outer:hover .inner:before {
+    top: 0;
+    }
+    
+    .outer:hover .inner:after {
+    bottom: 0;
+    }
+    .confirm{
+        width: 150px;
+        height: 30px;
+        line-height: 30px; 
+    }
+
+    .order-list-body{
+        margin-top: 30px;
+        max-height: 245px;
+        overflow-y: auto;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        animation: slideIn 1.5s ease-in-out forwards;
+    }
+    .order-item{
+        width: 330px;
+        height: 50px;
+        font-family: 'RocknRoll One';
+        color: #F17400;
+        font-size: 10px;
+        margin: 0px 0px 20px 10px;
+        background-color: #ffffff6f;
+        border-radius: 10px;
+        }
+        /* ... (existing styles) ... */
+        
+        /* Apply styles to the table */
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        height: 50px;
+        }
+        
+        /* Apply styles to table cells */
+        tr td {
+        padding: 5px 5px 5px 5px;
+        text-align: center;
+        }
+        
+        /* Apply styles to the number column */
+        .number {
+        padding-left: 20px;
+        }
+        
+        /* Apply styles to the item image */
+        td img {
+        width: 40px;
+        height: 40px;
+        }
+        
+        /* Apply styles to the plus and minus buttons */
+        .minus,
+        .plus {
+        background-color: #F17400;
+        width: 15px;
+        height: 15px;
+        border: none;
+        color: white;
+        font-size: 10px;
+        }
+        
+        .close{
+        background-color: #ffffff00;
+        width: 15px;
+        height: 15px;
+        border: none;
+        color: #F17400;
+        font-size: 15px;
+        margin-right: 5px;
+        }
+    .order-total{
+        top: 75%;
+        position: absolute;
+        font-family: 'RocknRoll One';
+        color: #F17400;
+        font-size: 12px;
+        margin: 0px 10px 20px 10px;
+        width: 330px;
+        border-radius: 10px;
+    }
+      hr{
+        width: 310px;
+        position: absolute;
+        top: 72%;
+        margin-left: 20px;
+    }
+    .order-table{
+        width: 100%;
+    }
+    #emailForm {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #F17400;
+        border-radius: 10px;
+        z-index: 100;
+        
+    }
+    #username{
+        width: 220px;
+        height: 30px;
+        border-color: #F17400;
+    }
+    #email{
+        width: 220px;
+        margin-top: 20px;
+        height: 30px;
+        border-color: #F17400;
+    }
+    
+    #submit-button {
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 5%;
+        padding: 5px 0px 5px 0px;
+        border:1px solid #F17400;
+        border-radius: 5px;
+        width: 200px;
+        
+    }
+    .close-mail{
+        top: -1%;
+        right: -1%;
+        color: red;
+    }
+    .index-large-photo{
+        width: 90%;
+        margin-top: 70px;
+        float:none;
+        position: absolute;
+        top: 8%;
+        margin-left: 10%;
+    }
+    .index-large-photo img{
+        width: 280px;
+        height: 280px;
+        margin-bottom: 10%;
+    }
+    .index-text{
+        position: absolute;
+        top: 63%;
+        height: fit-content;
+    }
+    .index-head-text{
+        font-size: 25px;
+        line-height: 45px;
+    }
+    .index-body-text{
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .index-line
+    {
+        margin-top: 5%;
+        width: 300px;
+    }
+    .order{
+        /* margin-top: 2%; */
+        width: 120px;
+        height: 40px;
+        border-radius: 10px 10px 50px 10px;
+    }
+    .clip-notching{
+        position: absolute;
+        right: 20px;
+        width: 70px;
+        height: 30px;
+    }
+    .index-photo-name{
+        margin-left: 14%;
+        font-size: 15px;
+    }
+    .next-button-text .prev-button-text{
+        font-size: 10px;
+    }
+    .next-button{
+        margin-right: 50px;
+    }
+    .prev-button svg{
+        margin-top: 5%;
+        width:20px;
+        height:8px;
+        fill:none;
+    }
+    .next-button svg{
+        margin-top: 6%;
+        width:20px;
+        height:8px;
+        fill:none;
+    }
+    .item{
+        top: 30%;
+        
+    } 
+
+    .item:nth-child(1),
+.item:nth-child(2){
+    
+    left:30%;
+    
+    
+}
+.item:nth-child(3){
+    left:30%;
+}
+.item:nth-child(n+4){
+    left:calc(30%);
+    opacity: 0;
+}
+.container{
+    /* margin-top: 25%; */
+    position: absolute;
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    width: 100%;
+    height:100%;
+    max-width: 100%;
+    
+}
+.review-form{
+    top: 70%;
+    left: 10%;
+    
+    
+}
+.buttons{
+    top: 60%;
+    left: 0%;
+    height: 100px;
+}
+.about-body{
+    height: 100%;
+    padding-top: 20%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    position: relative;
+    margin-left: 25%;
+}
+.MinThwayKhant{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+}
+.AungKaungSett{
+    position: absolute;
+    top: 150%;
+    left: 0%;
+}
+footer{
+    position: absolute;
+    top: 155%;
+    left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.photo-upload-img{
+    left: 80%;
+    
+}
+
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Sulphur Point' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=RocknRoll One' rel='stylesheet'>
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+    -->
+    <style>
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo-container">
+            <div class="logo-three-line">
+                <div class="logo-three-line1"></div>
+                <div class="logo-three-line2"></div>
+                <div class="logo-three-line3"></div>
+            </div>
+            <div class="navbar-name"><span style="color: #F17400; font-family: 'RocknRoll One';">H</span>arm<span style="color: #F17400; font-family: 'RocknRoll One';">o</span>ny</div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-item" active-color="#F17400">Home</a>
+                    <a href="menu.html" class="nav-item " active-color="#F17400">Menu</a>
+                    <a href="review.html" class="nav-item is-active" active-color="#F17400">Review</a>
+                    <a href="aboutus.html" class="nav-item" active-color="#F17400">About Us</a>
+                    <span class="nav-indicator"></span>
+                </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="review-form">
+            <div class="review-form-header">Review your <span style="color: #F17400;">meal</span>, review the <span style="color: #F17400;">magic</span>!</div>
+            <div class="reviewer-name-get">Name</div>
+            <input type="text" class="reviewer-name-input" required="true">
+            <div class="review-description-get">Review</div>
+            <textarea name="description" class="review-description-input" cols="30" rows="3" required="true"></textarea>
+            <div class="reviewer-photo-get">Upload Your Photo</div>
+            <div class="reviewer-photo-upload" id="dropArea"><img id="selectedImage" src="photo.png" class="photo-upload-img">Drop your image here or <label class="fileInput" for="fileInput"><span style="color: #2a9df4; text-decoration: underline;">browse.</span></label>
+                <input type="file" id="fileInput" style="display:none">
+            </div>
+            <button class="submit-review" onclick="submit()">Submit</button>
+
+        </div>
+        <div id="slide">
+            <div class="item">
+                <div class="sec-body">
+                    <div class="silde-container swiper">
+                        <div class="slide-content">
+                            <div class="card-wrapper swiper-wrapper">
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <span class="overlay"></span>
+                                        <div class="card-image">
+                                            <img src="sett.jpg" alt="" class="card-img">
+                                        </div>
+                                    </div>
+                                    <div class="reviewer-name">
+                                        Aung Kaung Sett
+                                    </div>
+                                    <div class="review-text">
+                                        An exquisite culinary experience that delighted my senses. Thanks for the delicious foods that took my palate on a journey.
+                                    </div>
+                                    
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="item" >
+                <div class="sec-body">
+                    <div class="silde-container swiper">
+                        <div class="slide-content">
+                            <div class="card-wrapper swiper-wrapper">
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <span class="overlay"></span>
+                                        <div class="card-image">
+                                            <img src="swan.jpg" alt="" class="card-img">
+                                        </div>
+                                    </div>
+            
+                                    <div class="reviewer-name">
+                                        Swan Pyae Aung
+                                    </div>
+                                    <div class="review-text">
+                                        Savoring every bite was an absolute pleasure. Thanks for crafting such delicious foods!
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="item">
+                <div class="sec-body">
+                    <div class="silde-container swiper">
+                        <div class="slide-content">
+                            <div class="card-wrapper swiper-wrapper">
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <span class="overlay"></span>
+                                        <div class="card-image">
+                                            <img src="khin.jpg" alt="" class="card-img">
+                                        </div>
+                                    </div>
+            
+                                    <div class="reviewer-name">
+                                        Khin Hnin Htet
+                                    </div>
+                                    <div class="review-text">
+                                        A symphony of flavors that left me craving for more. Thanks for the delicious foods that made my day!
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="item">
+                <div class="sec-body">
+                    <div class="silde-container swiper">
+                        <div class="slide-content">
+                            <div class="card-wrapper swiper-wrapper">
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <span class="overlay"></span>
+                                        <div class="card-image">
+                                            <img src="chan.jpg" alt="" class="card-img">
+                                        </div>
+                                    </div>
+            
+                                    <div class="reviewer-name">
+                                        Khin Chan Thar
+                                    </div>
+                                    <div class="review-text">
+                                        A gastronomic delight that exceeded all expectations. Thanks for serving up such delicious foods!
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="item">
+                <div class="sec-body">
+                    <div class="silde-container swiper">
+                        <div class="slide-content">
+                            <div class="card-wrapper swiper-wrapper">
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <span class="overlay"></span>
+                                        <div class="card-image">
+                                            <img src="moe.jpg" alt="" class="card-img">
+                                        </div>
+                                    </div>
+            
+                                    <div class="reviewer-name">
+                                        Moe Thiri Khin
+                                    </div>
+                                    <div class="review-text">
+                                        Culinary perfection achieved! Thanks for the delicious foods that turned an ordinary day into something extraordinary.
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="item">
+                <div class="sec-body">
+                    <div class="silde-container swiper">
+                        <div class="slide-content">
+                            <div class="card-wrapper swiper-wrapper">
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <span class="overlay"></span>
+                                        <div class="card-image">
+                                            <img src="min.jpg" alt="" class="card-img">
+                                        </div>
+                                    </div>
+            
+                                    <div class="reviewer-name">
+                                        Min Thet Lwin
+                                    </div>
+                                    <div class="review-text">
+                                        A culinary masterpiece! Thanks for the delicious foods that left my taste buds dancing with joy.
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="item">
+                <div class="sec-body">
+                    <div class="silde-container swiper">
+                        <div class="slide-content">
+                            <div class="card-wrapper swiper-wrapper">
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <span class="overlay"></span>
+                                        <div class="card-image">
+                                            <img src="khant.jpg" alt="" class="card-img">
+                                        </div>
+                                    </div>
+            
+                                    <div class="reviewer-name">
+                                        Min Thway Khant
+                                    </div>
+                                    <div class="review-text">
+                                        From the first bite to the last, every morsel was a burst of flavor. Thanks for treating me to such delicious foods!
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <script src="serverScript.js"></script>
+    <script>
+        "use strict";
+
+var indicator = document.querySelector('.nav-indicator');
+var items = document.querySelectorAll('.nav-item');
+
+function handleIndicator(el) {
+    items.forEach(function (item) {
+        item.classList.remove('is-active');
+        item.removeAttribute('style');
+    });
+    indicator.style.width = "".concat(el.offsetWidth+8, "px");
+    indicator.style.left = "".concat(el.offsetLeft+15, "px");
+    indicator.style.backgroundColor = el.getAttribute('active-color');
+    el.classList.add('is-active');
+    el.style.color = el.getAttribute('active-color');
+}
+
+items.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+        handleIndicator(e.target);
+    });
+});
+
+// Manually set initial indicator position for default "is-active" item
+var defaultActiveItem = document.querySelector('.nav-item.is-active');
+if (defaultActiveItem) {
+    indicator.style.width = "".concat(defaultActiveItem.offsetWidth, "px");
+    indicator.style.left = "".concat(defaultActiveItem.offsetLeft, "px");
+    indicator.style.backgroundColor = defaultActiveItem.getAttribute('active-color');
+    defaultActiveItem.style.color = defaultActiveItem.getAttribute('active-color');
+}
+
+
+    </script>
+    
+</body>
+</html>
+  

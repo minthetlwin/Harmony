@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Sulphur Point' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=RocknRoll One' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Harmony</title>
+    <style>
+        
+
+    </style>
+</head>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = ['Lovepik_com-401506378-spicy-hot-food.png', 'pngegg.png', 'pngegg (3).png'];
+      const names = ['MALA TANG', 'SPAGHETTI', 'NOODLE'];
+      let currentImageIndex = 0;
+      let currentNameIndex = 0;
+  
+      const previousBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      const image = document.getElementById('image');
+      const name = document.querySelector('.index-photo-name');
+  
+      previousBtn.addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        image.src = images[currentImageIndex];
+  
+        currentNameIndex = (currentNameIndex - 1 + names.length) % names.length;
+        name.innerHTML = names[currentNameIndex];
+      });
+  
+      nextBtn.addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        image.src = images[currentImageIndex];
+  
+        currentNameIndex = (currentNameIndex + 1) % names.length;
+        name.innerHTML = names[currentNameIndex];
+      });
+    });
+  </script>
+  
+
+<body>
+    <div class="navbar">
+        <div class="navbar-logo-container">
+            <div class="logo-three-line">
+                <div class="logo-three-line1"></div>
+                <div class="logo-three-line2"></div>
+                <div class="logo-three-line3"></div>
+            </div>
+            <div class="navbar-name"><span style="color: #F17400;">H</span>arm<span style="color: #F17400;">o</span>ny</div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-item is-active" active-color="#F17400">Home</a>
+                    <a href="menu.html" class="nav-item" active-color="#F17400">Menu</a>
+                    <a href="review.html" class="nav-item" active-color="#F17400">Review</a>
+                    <a href="aboutus.html" class="nav-item" active-color="#F17400">About Us</a>
+                    <span class="nav-indicator"></span>
+                </nav>
+        </div>
+    </div>
+    <div class="index-body">
+        <div class="index-photo">
+            <div class="index-large-photo">
+                <div class="clip-notching">New</div>
+                <img id="image" class="large-image" src="Lovepik_com-401506378-spicy-hot-food.png" alt="food photo">
+                <div>
+                    <div class="prev-button">
+                        <button class="prev">
+                        <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 31 12">
+                            <path d="M0.997864 6L10.9979 11.7735V0.226497L0.997864 6ZM9.99786 7H30.0022V5H9.99786V7Z" fill="black"/>
+                          </svg>
+                          <div class="prev-button-text">Prev</div>
+                        </button>
+        
+                    </div>
+                    <div class="index-photo-name">
+                        MALA TANG
+                    </div>
+                    <div class="next-button">
+                        <button class="next">
+                            <div class="next-button-text">Next</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 12">
+                            <path d="M29.0043 6L19.0043 0.226497V11.7735L29.0043 6ZM20.0043 5L-3.8147e-05 5V7L20.0043 7V5Z" fill="black"/>
+                          </svg>
+                          
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+    
+        </div>
+        <div class="index-text">
+            <div class="index-head-text">
+                    The <span style="color: #F17400;">Key</span><br>To Find Din<span style="color: #F17400;">ing</span>
+            </div>
+            <div class="index-body-text">
+                Savor perfection at Harmony,<br>
+                where every bite is a masterpiece of
+                flavor and finesse.
+            </div>
+            <div class="index-line"></div>
+            <div class="index-button">
+                <a href="menu.html"><button class="order">Order Now</button></a>
+                <!-- <button class="book-table">Book a Table</button> -->
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        "use strict";
+
+var indicator = document.querySelector('.nav-indicator');
+var items = document.querySelectorAll('.nav-item');
+
+function handleIndicator(el) {
+    items.forEach(function (item) {
+        item.classList.remove('is-active');
+        item.removeAttribute('style');
+    });
+    indicator.style.width = "".concat(el.offsetWidth+13, "px");
+    indicator.style.left = "".concat(el.offsetLeft+24, "px");
+    indicator.style.backgroundColor = el.getAttribute('active-color');
+    el.classList.add('is-active');
+    el.style.color = el.getAttribute('active-color');
+}
+
+items.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+        handleIndicator(e.target);
+    });
+});
+
+// Manually set initial indicator position for default "is-active" item
+var defaultActiveItem = document.querySelector('.nav-item.is-active');
+if (defaultActiveItem) {
+    indicator.style.width = "".concat(defaultActiveItem.offsetWidth+7, "px");
+    indicator.style.left = "".concat(defaultActiveItem.offsetLeft, "px");
+    indicator.style.backgroundColor = defaultActiveItem.getAttribute('active-color');
+    defaultActiveItem.style.color = defaultActiveItem.getAttribute('active-color');
+}
+    </script>
+    
+</body>
+</html>
